@@ -25,12 +25,47 @@
 	overflow: hidden;
 }
 
+.homequad:hover .over {
+	opacity: 0.5;
+}
+
+.homequad:hover .hometxt {
+	color: black;
+}
+
+.over {
+ 	position: absolute;
+ 	top: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;
+ 	height: 100%;
+ 	width: 100%;
+	opacity: 0;
+	transition: .3s ease;
+	background-color: white;
+}
+
 .hometxt {
 	position: absolute;
+	left: 10%;
+	top: 5%;
 	z-index: 1;
+	color: white;
+	font-family: futura;
+	transition: 0.3s ease;
 }
 
 .homeimg {
 	z-index: 0;
 	width: 100%;
+}
+
+#abouttxt {
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	color: red;
+	font-family: futura;
+	transition: 0.3s ease;
 }
