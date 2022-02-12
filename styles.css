@@ -99,7 +99,6 @@ li.navbarel{
 /* writing */
 
 .txt {
-	position: absolute;
 	font-family: futura;
 	color: #b3b3b3;
 }
@@ -111,3 +110,9 @@ li.navbarel{
 #writingbody {
 	padding-left: 100;
 }
+
+.heading {
+	font-family: futura;
+	color: #e6e6e6;
+}
+
