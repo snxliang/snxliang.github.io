@@ -61,6 +61,11 @@
 .homeimg {
     z-index: 0;
     width: 100%;
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #abouttxt {
@@ -87,13 +92,14 @@
     position: relative;
     list-style-type: none;
     margin: 10;
-    padding: 0;
+    padding: 1.5vw;
 }
 
 li.navbarel{
     display: inline;
     font-family: futura;
     color: #e6e6e6;
+    padding-right: 1em;
 }
 
 /* writing */
@@ -101,15 +107,10 @@ li.navbarel{
 .txt {
     font-family: futura;
     color: #b3b3b3;
-    padding: 1vw;
 }
 
 .title {
     color: white;
-}
-
-#writingbody {
-    padding-left: 100;
 }
 
 .heading {
@@ -118,5 +119,15 @@ li.navbarel{
 }
 
 .prose p{
+    font-size: 1.1em;
     text-indent: 3em;
+    font-family: courier new;
+    color: #e3e3e3;
+    padding-left: 5em;
+}
+
+@media (orientation: landscape) {
+    .prose {
+	padding-right: 40vw;
+    }
 }
