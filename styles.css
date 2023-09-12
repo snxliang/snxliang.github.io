@@ -121,9 +121,11 @@ li.navbarel{
 .prose p{
     font-size: 1.1em;
     text-indent: 3em;
-    font-family: courier new;
+    line-height: 2em;
+    font-family: courier;
     color: #e3e3e3;
     padding-left: 5em;
+    padding-right: 5em;
 }
 
 @media (orientation: landscape) {
