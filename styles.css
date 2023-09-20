@@ -124,12 +124,13 @@ li.navbarel{
     line-height: 2em;
     font-family: courier;
     color: #e3e3e3;
-    padding-left: 5em;
-    padding-right: 5em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 @media (orientation: landscape) {
     .prose {
+	padding-left: 5em;
 	padding-right: 40vw;
     }
     .prose p{
