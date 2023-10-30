@@ -28,11 +28,16 @@
 }
 
 .homequad:hover .over {
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 .homequad:hover .hometxt {
     color: black;
+}
+
+.homequad:hover .abouttxt {
+    opacity: 1;
+    color: #b30000;
 }
 
 .over {
@@ -68,13 +73,14 @@
     transform: translateY(-50%);
 }
 
-#abouttxt {
+.abouttxt {
+    opacity: 0;
     position: absolute;
-    top: 5%;
     left: 10%;
-    color: red;
+    top: 5%;
     font-family: futura, arial;
-    transition: 0.2s ease;
+    -ms-transform: translateY(-1em);
+    transform: translateY(-1em);
 }
 
 .homelink {
@@ -95,7 +101,7 @@
     padding: 1.5vw;
 }
 
-li.navbarel{
+.navbarel{
     display: inline;
     font-family: futura, arial;
     color: #e6e6e6;
@@ -119,21 +125,28 @@ li.navbarel{
 }
 
 .prose p{
-    font-size: 1.6em;
+    font-size: 1.1em;
     text-indent: 3em;
     line-height: 2em;
     font-family: courier, courier new;
     color: #e3e3e3;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 5em;
+    padding-right: 40vw;
 }
 
-@media (orientation: landscape) {
-    .prose {
-	padding-left: 5em;
-	padding-right: 40vw;
-    }
+@media (orientation: portrait) {
     .prose p{
-	font-size: 1.1em;
+	padding-left: 3em;
+	padding-right: 3em;
+	font-size: 1.6em;
+    }
+    .hometxt {
+	font-size: 1.4em;
+    }
+    .txt {
+	font-size: 1.4em;
+    }
+    .navbarel {
+	font-size: 1.4em;
     }
 }
