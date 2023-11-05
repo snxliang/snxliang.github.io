@@ -136,9 +136,9 @@
 
 @media (orientation: portrait) {
     .prose p{
-	padding-left: 3em;
-	padding-right: 3em;
-	font-size: 1.6em;
+	padding-left: 1em;
+	padding-right: 1em;
+	font-size: 1.4em;
     }
     .hometxt {
 	font-size: 1.5em;
