@@ -134,11 +134,22 @@
     padding-right: 40vw;
 }
 
+.prose img{
+    padding-left: 5em;
+    padding-right: 40vw;
+    width: 30vw;
+}
+
 @media (orientation: portrait) {
     .prose p{
 	padding-left: 1em;
 	padding-right: 1em;
 	font-size: 1.4em;
+    }
+    .prose img{
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 80vw;
     }
     .hometxt {
 	font-size: 1.5em;
