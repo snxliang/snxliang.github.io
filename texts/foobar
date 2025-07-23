@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+# Usage: ./replace_navbar.zsh [directory]
+
+# Directory to search, defaults to current dir
+DIR="${1:-.}"
+
+# Find all .html files and run perl inline
+find "$DIR" -type f -name "*.html" | while read -r file; do
+  perl -0777 -i -pe '
+    s{
+<ul class="navbar">\s*
+<li class="navbarel"><a [^>]+>home</a></li>\s*
+<li class="navbarel"><a [^>]+>fiction</a></li>\s*
+<li class="navbarel"><a [^>]+>non-fiction</a></li>\s*
+<li class="navbarel"><a [^>]+>photo</a></li>\s*
+<li class="navbarel"><a [^>]+>about</a></li>\s*
+</ul>
+}{
+<!--Navigation bar-->
+<div id="navbar"></div>
+<script src="navbar.js"></script>
+<script>
+    \$(document).ready(function(){
+        loadNavbar('\''projects'\'')
+    });
+</script>
+<!--end of Navigation bar-->
+}sgx;
+  ' "$file"
+
+  echo "Processed: $file"
+done
+
