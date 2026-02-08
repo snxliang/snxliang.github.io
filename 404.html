@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<title>sunny x. liang</title>
-	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>sunny x. liang</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
 
-    <body style="background-color: #4d4d4d;" id="writingbody">
+    <body style="background-color: #4d4d4d" id="writingbody">
+        <!--Navigation bar-->
+        <div id="navbar"></div>
+        <script src="navbar.js"></script>
+        <script>
+            $(document).ready(function () {
+                loadNavbar("photo");
+            });
+        </script>
+        <!--end of Navigation bar-->
 
-	<!--Navigation bar-->
-	<div id="navbar"></div>
-	<script src="navbar.js"></script>
-	<script>
-	    $(document).ready(function(){
-		loadNavbar('photo')
-	    });
-	</script>
-	<!--end of Navigation bar-->
+        <br /><br />
 
-	<br><br>
-
-	<span class="txt">
-	    Dang, the thing you are looking for doesn't exist. 
-	</span>
-
+        <span class="prose txt">
+            Dang, the thing you are looking for doesn't exist. Please email me
+            if you think this is an error. Also, congratulations on finding the
+            secret 404 page.
+        </span>
     </body>
 </html>
