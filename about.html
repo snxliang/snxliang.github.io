@@ -1,61 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<title>sunny x. liang</title>
-	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>sunny x. liang</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
-    <body style="background-color: #4d4d4d;" id="writingbody">
+    <body style="background-color: #4d4d4d" id="writingbody">
+        <!--Navigation bar-->
+        <div id="navbar"></div>
+        <script src="navbar.js"></script>
+        <script>
+            $(document).ready(function () {
+                loadNavbar("about");
+            });
+        </script>
+        <!--end of Navigation bar-->
 
-	<!--Navigation bar-->
-	<div id="navbar"></div>
-	<script src="navbar.js"></script>
-	<script>
-	    $(document).ready(function(){
-		loadNavbar('about')
-	    });
-	</script>
-	<!--end of Navigation bar-->
+        <br /><br />
 
-	<br><br>
+        <div style="width: 60%; margin: auto">
+            <div style="width: 50%; float: left">
+                <figure>
+                    <img style="width: 80%" src="img/kafka.jpg" />
+                    <figcaption class="txt" style="color: #d9d9d9">
+                        Rare photograph of me.
+                    </figcaption>
+                </figure>
+            </div>
 
-	<div style="width: 60%; margin: auto;">
-	    <div style="width: 50%; float: left;">
-		<figure>
-		    <img style="width: 80%;" src="img/kafka.jpg">
-		    <figcaption class="txt" style="color: #d9d9d9;">Rare photograph of me.</figcaption>
-		</figure>
-	    </div>
+            <div style="width: 50%; float: left">
+                <figure>
+                    <img style="width: 80%" src="img/me.jpg" />
+                    <figcaption class="txt" style="color: #d9d9d9">
+                        Franz Kafka in 1923.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
 
-	    <div style="width: 50%; float: left;">
-		<figure>
-		    <img style="width: 80%;" src="img/me.jpg">
-		    <figcaption class="txt" style="color: #d9d9d9;">Franz Kafka in 1923.</figcaption>
-		</figure>
-	    </div>
-	</div>
+        <div style="clear: both">
+            <div class="txt" style="position: static; padding: 6vw">
+                I like to write and take pictures of stuff. I also like going
+                places that are really high and really cold. I studied cool
+                stuff at UCLA involving big numbers and funny symbols.
+                <br /><br />
+                <a
+                    target="_blank"
+                    href="https://open.spotify.com/playlist/5cTtPDfvmOKbDCkzjrqNSp?si=dcc98a09cc614861"
+                    class="link"
+                    style="color: #cc0000; !important"
+                    >NyQuil</a
+                >
+                <br /><br />
+                Are you a Nigerian prince? If not, then my email is sliangsunny
+                (at) gmail (dot) com. If you are a Nigerian prince, that's
+                pretty sick, send me pictures of Nigeria or something.
+                <br /><br />
+            </div>
+        </div>
 
+        <div style="width: 30%; margin: auto">
+            <figure>
+                <img style="width: 90%" src="img/kafkadog.jpg" />
+                <figcaption class="txt" style="color: #d9d9d9">
+                    Me with my dog.
+                </figcaption>
+            </figure>
+            <br /><br /><br /><br />
+        </div>
 
-	<div style="clear: both;">
-	    <div class="txt" style="position: static; padding: 6vw">I like to write and take pictures of stuff. I also like going places that are really high and really cold. I studied cool stuff at UCLA involving big numbers and funny symbols.
-		<br><br>
-		<a target="_blank" href="https://open.spotify.com/playlist/5cTtPDfvmOKbDCkzjrqNSp?si=dcc98a09cc614861" class="link" style="color: #cc0000; !important">NyQuil</a>
-		<br><br>
-		Are you a Nigerian prince? If not, then my email is sliangsunny (at) gmail (dot) com. If you are a Nigerian prince, that's pretty sick, send me pictures of Nigeria or something.</div>
-	</div>
+        <div class="txt" style="position: static; padding: 6vw">
+            Friends with personal sites:<br /><br />
+            <a target="_blank" href="https://electricnight.nexus" class="link"
+                >electricnight.nexus</a
+            >
+        </div>
 
-	<div style="width: 30%; margin: auto;">
-	    <figure>
-		<img style="width: 90%" src="img/kafkadog.jpg">
-		<figcaption class="txt" style="color: #d9d9d9;">Me with my dog.</figcaption>
-	    </figure>
-	</div>
-
-	<br>
-	<br>
-	<br>
-	<br>
-
+        <br />
+        <br />
+        <br />
+        <br />
     </body>
 </html>
