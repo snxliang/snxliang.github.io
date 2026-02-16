@@ -316,15 +316,12 @@
     content: attr(data-user);
 }
 
-.email-protection::hover {
-    display: none;
-}
-
 .email-hover {
     position: relative;
     cursor: help;
 }
 
+/* Default: show email, hide tooltip */
 .email-hover .email-protection {
     display: inline;
 }
@@ -336,12 +333,15 @@
     border-radius: 4px;
 }
 
-.email-hover:hover .email-protection {
-    display: none;
-}
+/* Only enable hover effect on real hover devices (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    .email-hover:hover .email-protection {
+        display: none;
+    }
 
-.email-hover:hover .hover-text {
-    display: inline;
+    .email-hover:hover .hover-text {
+        display: inline;
+    }
 }
 
 /* end email */
