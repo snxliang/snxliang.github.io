@@ -1,48 +1,21 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
         <title>sunny x. liang</title>
-        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body style="background-color: #4d4d4d" id="writingbody">
-        <ul class="navbar">
-            <li class="navbarel">
-                <a
-                    style="text-decoration: none; color: inherit"
-                    href="index.html"
-                    >home</a
-                >
-            </li>
-            <li class="navbarel">
-                <a
-                    style="text-decoration: none; color: inherit"
-                    href="fiction.html"
-                    >fiction</a
-                >
-            </li>
-            <li class="navbarel">
-                <a
-                    style="text-decoration: none; color: inherit"
-                    href="nfiction.html"
-                    >non-fiction</a
-                >
-            </li>
-            <li class="navbarel">
-                <a
-                    style="text-decoration: none; color: inherit"
-                    href="photo.html"
-                    >photo</a
-                >
-            </li>
-            <li class="navbarel">
-                <a
-                    style="text-decoration: none; color: inherit"
-                    href="about.html"
-                    >about</a
-                >
-            </li>
-        </ul>
+        <!--Navigation bar-->
+        <div id="navbar"></div>
+        <script src="../js/navbar.js"></script>
+        <script>
+            $(document).ready(function () {
+                loadNavbar(null);
+            });
+        </script>
+        <!--end of Navigation bar-->
 
         <br /><br />
 

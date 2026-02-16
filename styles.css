@@ -143,6 +143,156 @@
     width: 30vw;
 }
 
+.active {
+    color: #cc0000 !important;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* start pottery */
+
+.pot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pot-item {
+    padding: 1rem;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.pot-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.pot-item img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.pot-caption {
+    margin-top: 0.75rem;
+    color: #d9d9d9;
+    font-size: 0.9rem;
+}
+
+/* end pottery */
+
+/* start modal lightbox */
+.pot-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 9999;
+    font-family:
+        courier,
+        courier new;
+}
+
+.pot-modal.is-open {
+    display: block;
+}
+
+.pot-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.5);
+}
+
+.pot-modal__panel {
+    position: relative;
+    max-width: 1440px;
+    width: calc(100% - 8rem);
+    margin: 5vh auto;
+    background: rgba(90, 90, 90, 1);
+    border-radius: 12px;
+    max-height: 90vh;
+}
+
+.pot-modal__content {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 1rem;
+    padding: 1rem;
+
+    /* make the content fit inside the panel height */
+    height: 90vh;
+    max-height: 90vh;
+    box-sizing: border-box;
+    align-items: start;
+}
+
+.pot-modal__main {
+    width: 100%;
+    height: 100%;
+    max-height: calc(90vh - 2rem); /* subtract padding */
+    object-fit: contain;
+    display: block;
+}
+
+.pot-modal__info {
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.pot-modal__title {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.pot-modal__desc {
+    margin: 0;
+    line-height: 1.4;
+    color: #cfcfcf;
+}
+
+.pot-modal__thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.pot-modal__thumbs button {
+    border: 0;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.pot-modal__thumbs img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pot-modal__thumbs img.is-active {
+    outline: 2px solid rgba(200, 200, 200, 0.65);
+}
+
+@media (max-width: 800px) {
+    .pot-modal__content {
+        grid-template-columns: 1fr;
+    }
+    .pot-modal__main {
+        height: 50vh;
+    }
+}
+
+/* end modal lightbox */
+
 @media (orientation: portrait) {
     .prose p {
         padding: 1em;
@@ -162,13 +312,4 @@
     .navbarel {
         font-size: 1.5em;
     }
-}
-
-.active {
-    color: #cc0000 !important;
-}
-
-.link {
-    color: inherit;
-    text-decoration: none;
 }

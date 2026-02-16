@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>sunny x. liang</title>
+
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+
+        <!-- jQuery (for navbar only) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body style="background-color: #4d4d4d" id="writingbody">
+        <!-- Navigation bar -->
+        <div id="navbar"></div>
+
+        <!-- Pottery Grid -->
+        <div class="pot-grid">
+            <div
+                class="pot-item"
+                tabindex="0"
+                data-title="First Firing"
+                data-desc="Cone 6, cobalt glaze, mystery iron-rich clay."
+                data-images='["../img/pot0002.jpg","../img/pot0001.jpg","../img/pot0015.jpg"]'
+            >
+                <img src="../img/pot0002.jpg" alt="pots" />
+                <div class="pot-caption txt">First Firing</div>
+            </div>
+
+            <div
+                class="pot-item"
+                tabindex="0"
+                data-title="Blue Mug"
+                data-desc="Mug with blue glaze."
+                data-images='["../img/pot0003.jpg","../img/pot0004.jpg","../img/pot0013.jpg"]'
+            >
+                <img src="../img/pot0003.jpg" alt="mug" />
+                <div class="pot-caption txt">Blue Mug</div>
+            </div>
+
+            <div
+                class="pot-item"
+                tabindex="0"
+                data-title="Blue-Green Yunomi"
+                data-desc="Cobalt blue on the outside and desert sage on the inside."
+                data-images='["../img/pot0005.jpg","../img/pot0012.jpg","../img/pot0014.jpg"]'
+            >
+                <img src="../img/pot0005.jpg" alt="cup" />
+                <div class="pot-caption txt">Blue-Green Yunomi</div>
+            </div>
+
+            <div
+                class="pot-item"
+                tabindex="0"
+                data-title="Blue Mug"
+                data-desc="Small bowl in blue glaze."
+                data-images='["../img/pot0006.jpg","../img/pot0009.jpg","../img/pot0011.jpg"]'
+            >
+                <img src="../img/pot0006.jpg" alt="small bowl" />
+                <div class="pot-caption txt">Blue Bowl</div>
+            </div>
+
+            <div
+                class="pot-item"
+                tabindex="0"
+                data-title="Blue Mug"
+                data-desc="A humble rice bowl in honour of Ryokan. Cobalt blue on the outside and desert sage on the inside."
+                data-images='["../img/pot0010.jpg","../img/pot0008.jpg","../img/pot0007.jpg"]'
+            >
+                <img src="../img/pot0010.jpg" alt="small bowl" />
+                <div class="pot-caption txt">Blue-Green Mendicant Bowl</div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="pot-modal" id="potModal" aria-hidden="true">
+            <div class="pot-modal__backdrop" data-close></div>
+
+            <div
+                class="pot-modal__panel"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="potModalTitle"
+            >
+                <div class="pot-modal__content">
+                    <img class="pot-modal__main" id="potModalMain" alt="" />
+
+                    <div class="pot-modal__info">
+                        <h2 class="pot-modal__title" id="potModalTitle"></h2>
+                        <p class="pot-modal__desc" id="potModalDesc"></p>
+
+                        <div
+                            class="pot-modal__thumbs"
+                            id="potModalThumbs"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts (placed at bottom so DOM is loaded first) -->
+        <script src="../js/navbar.js"></script>
+        <script>
+            $(function () {
+                loadNavbar("projects");
+            });
+        </script>
+
+        <!-- Pottery modal functionality -->
+        <script src="../js/pottery.js"></script>
+    </body>
+</html>
