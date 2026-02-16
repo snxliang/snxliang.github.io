@@ -154,6 +154,21 @@
 
 /* start pottery */
 
+.status {
+    display: inline-flex; /* keeps dot + text aligned nicely */
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .pot-grid {
     display: flex;
     flex-wrap: wrap;
@@ -186,7 +201,7 @@
 
 /* end pottery */
 
-/* start modal lightbox */
+/* start pottery modal */
 .pot-modal {
     position: fixed;
     inset: 0;
@@ -223,11 +238,9 @@
     gap: 1rem;
     padding: 1rem;
 
-    /* make the content fit inside the panel height */
-    height: 90vh;
-    max-height: 90vh;
+    height: 100%;
     box-sizing: border-box;
-    align-items: start;
+    align-items: stretch;
 }
 
 .pot-modal__main {
@@ -291,7 +304,47 @@
     }
 }
 
-/* end modal lightbox */
+/* end pottery modal */
+
+/* start email */
+
+.email-protection::after {
+    content: attr(data-domain);
+}
+
+.email-protection::before {
+    content: attr(data-user);
+}
+
+.email-protection::hover {
+    display: none;
+}
+
+.email-hover {
+    position: relative;
+    cursor: help;
+}
+
+.email-hover .email-protection {
+    display: inline;
+}
+
+.email-hover .hover-text {
+    display: none;
+    background: #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.email-hover:hover .email-protection {
+    display: none;
+}
+
+.email-hover:hover .hover-text {
+    display: inline;
+}
+
+/* end email */
 
 @media (orientation: portrait) {
     .prose p {
@@ -312,4 +365,55 @@
     .navbarel {
         font-size: 1.5em;
     }
+
+    /* start pottery modal */
+
+    /* modal becomes a vertical stack */
+    .pot-modal__panel {
+        width: calc(100% - 4rem);
+        margin: 2vh auto;
+        max-height: 96vh;
+    }
+
+    .pot-modal__content {
+        grid-template-columns: 1fr;
+        height: auto; /* IMPORTANT: don't force 90vh on mobile */
+        max-height: none;
+        align-items: stretch;
+    }
+
+    .pot-modal__main {
+        height: auto;
+        max-height: 55vh; /* image stays on-screen */
+        width: 100%;
+    }
+
+    /* reorder so info appears below image */
+    .pot-modal__main {
+        order: 1;
+    }
+    .pot-modal__info {
+        order: 2;
+    }
+
+    /* inside the info column, make thumbs after text */
+    .pot-modal__thumbs {
+        margin-top: 0.75rem;
+    }
+
+    /* optional: make thumbs a horizontal strip you can swipe */
+    .pot-modal__thumbs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.25rem;
+    }
+
+    .pot-modal__thumbs img {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 auto;
+    }
+
+    /* end pottery modal */
 }
