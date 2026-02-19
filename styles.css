@@ -396,6 +396,15 @@
         order: 2;
     }
 
+    .pot-modal__title {
+        font-size: 2rem;
+    }
+
+    .pot-modal__desc {
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+
     /* inside the info column, make thumbs after text */
     .pot-modal__thumbs {
         margin-top: 0.75rem;
