@@ -155,7 +155,7 @@
 /* start pottery */
 
 .status {
-    display: inline-flex; /* keeps dot + text aligned nicely */
+    display: inline-flex;
     align-items: center;
     gap: 0.4rem;
 }
