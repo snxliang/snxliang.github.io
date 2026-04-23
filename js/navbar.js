@@ -1,15 +1,19 @@
 function loadNavbar(activePage) {
-    // Are we currently viewing a file inside the /pages folder?
-    // Works for file:// because location.pathname contains ".../pages/whatever.html"
-    const inPages = window.location.pathname.includes("/pages/");
+    const path = window.location.pathname;
 
-    // Link to home depends on where we are
-    const homeHref = inPages ? "../index.html" : "index.html";
+    const inPages = path.includes("/pages/");
+    const inTexts = path.includes("/texts/");
 
-    // Links to other pages:
-    // - from root: "pages/fiction.html"
-    // - from /pages: "fiction.html" (same folder)
-    const pagesPrefix = inPages ? "" : "pages/";
+    const homeHref = inPages || inTexts ? "../index.html" : "index.html";
+
+    let pagesPrefix;
+    if (inPages) {
+        pagesPrefix = "";
+    } else if (inTexts) {
+        pagesPrefix = "../pages/";
+    } else {
+        pagesPrefix = "pages/";
+    }
 
     const navbarHTML = `
     <nav>
